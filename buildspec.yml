@@ -9,10 +9,18 @@ phases:
   build:
     commands:
       - python -m pytest --junitxml=pytest_reports/pytest_report.xml
+      - python -m pytest --junitxml=pytest_reports/pytest_report22.xml
 
 reports:
   pytest_reports:
     files:
       - pytest_report.xml
+    base-directory: pytest_reports/
+    file-format: JUNITXML
+    
+ reports:
+  pytest_reports222:
+    files:
+      - pytest_report22.xml
     base-directory: pytest_reports/
     file-format: JUNITXML
